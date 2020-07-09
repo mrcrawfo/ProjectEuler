@@ -1,14 +1,14 @@
 import math
 
-def isBasicPrime(n):
+def isBasicDivisible(n):
     return ((n % 2) == 0) or ((n % 3) == 0) or ((n % 5) == 0)
 
 def isPrime(n):
-    if isBasicPrime(n) and n != 2 and n != 3 and n != 5:
+    if isBasicDivisible(n) and n != 2 and n != 3 and n != 5:
         return False
     
     if n >= 3:
-        for x in range(3, math.floor(math.sqrt(n)), 2):
+        for x in range(3, math.floor(math.sqrt(n)) + 1, 2):
             if ((n % x) == 0):
                 return False
     elif n == 2:
